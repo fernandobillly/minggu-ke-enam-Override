@@ -1,0 +1,31 @@
+package sepatu;
+class sepatu {
+    public void sepatuAdidas() {
+        System.out.println("Sepatu Keren Buat Gaya");
+    }
+    
+    public void sepatuNike () {
+    System.out.println("Sepatu Keren buat olahraga dan jalan jalan ");
+}
+
+    public void sepatuSpeecs () {
+    System.out.println("Sepatu Keren Buat Futsal dan Sepak Bola");
+    }
+}
+class sepatuOlahraga extends sepatu {
+    
+    @Override
+    public void sepatuSpeecs () {
+        System.out.println("Sepatu Keren Buat olahraga");
+        super.sepatuSpeecs();    
+    }
+}
+public class sepatuMain{
+    public static void main(String[] args) {
+        sepatu sepatukeren = new sepatu();
+        sepatuOlahraga sepatuolahraga = new sepatuOlahraga();
+        sepatukeren.sepatuAdidas();
+        sepatuolahraga.sepatuSpeecs();
+    
+    }
+}
